@@ -1,6 +1,6 @@
 var loadQuoteButton = document.getElementById("loadQuote");
 var clickCount = 0;
-var zaphod = 0;
+var trinTragula = 0;
 
 function printQuote() {
   clickCount++;
@@ -21,7 +21,11 @@ function heartOfGold() {
   var element = document.getElementById("dontPanic");
   element.innerHTML = "Please do not press this button again";
   element.style.opacity = 1;
-  zaphod++;
+  trinTragula++;
+  if (trinTragula > 1) {
+    document.body.style.display = "none";
+    document.body.style.backgroundColor = "#000";
+  }
 }
 
 function doClickAction() {
@@ -35,6 +39,22 @@ function doClickAction() {
 function doDoubleClickAction() {
   document.getElementById("dontPanic").style.display = "inline-block";
 }
+
+function getRandomQuote(array) {
+  var i = Math.floor(Math.random() * array.length);
+  return array[i];
+}
+
+function getQuoteByTag(tag) {
+  var tagArray = [];
+  for (var i = 0; i < quotes.length; i++) {
+    if (quotes[i].tag === tag) {
+      tagArray.push(quotes[i]);
+    }
+  }
+  return tagArray;
+}
+
 
 // loadQuoteButton.addEventListener()
 

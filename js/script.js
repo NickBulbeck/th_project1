@@ -59,5 +59,4 @@ document.getElementById('dontPanic').addEventListener("click", heartOfGold, fals
 
 
 
-
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
