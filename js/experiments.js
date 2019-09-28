@@ -17,8 +17,11 @@ function printQuote() {
 
 printQuote();
 
-function blah() {
-  return 2*3;
+function heartOfGold() {
+  var element = document.getElementById("dontPanic");
+  element.innerHTML = "Please do not press this button again";
+  element.style.opacity = 1;
+
 }
 
 function doClickAction() {
@@ -26,7 +29,7 @@ function doClickAction() {
 }
 
 function doDoubleClickAction() {
-  console.log("Double-clicked");
+  document.getElementById("dontPanic").style.display = "inline-block";
 }
 
 // loadQuoteButton.addEventListener()

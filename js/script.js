@@ -50,7 +50,14 @@ project 1 - A Random Quote Generator
   comment.
 ***/
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-// document.getElementById('loadQuote').addEventListener("dblclick", printQuoteExperiment, false);
+document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
+
+
+
+
+
+
+
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
