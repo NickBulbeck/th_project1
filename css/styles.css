@@ -16,6 +16,9 @@ body {
   right: 10%;
   width: 80%;
   line-height: .5;
+  display:block;
+  /*added:*/
+
 }
 
 .quote {
@@ -72,9 +75,9 @@ body {
 }
 
 #loadQuote {
-  position: fixed;
+  position: fixed; 
   width: 12em;
-  display: inline-block;
+  display: inline-block; 
   left: 50%;
   margin-left: -6em;
   bottom: 150px;
