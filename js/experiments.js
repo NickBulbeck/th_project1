@@ -1,5 +1,6 @@
 var loadQuoteButton = document.getElementById("loadQuote");
 var clickCount = 0;
+var zaphod = 0;
 
 function printQuote() {
   clickCount++;
@@ -20,7 +21,7 @@ function heartOfGold() {
   var element = document.getElementById("dontPanic");
   element.innerHTML = "Please do not press this button again";
   element.style.opacity = 1;
-
+  zaphod++;
 }
 
 function doClickAction() {
