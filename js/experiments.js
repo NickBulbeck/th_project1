@@ -15,7 +15,6 @@ function printQuote() {
   }
 }
 
-printQuote();
 
 function heartOfGold() {
   var element = document.getElementById("dontPanic");
@@ -25,7 +24,11 @@ function heartOfGold() {
 }
 
 function doClickAction() {
-  console.log("Single-click");
+  var red = Math.floor(Math.random()*255);
+  var green = Math.floor(Math.random()*255);
+  var blue = Math.floor(Math.random()*255);
+  var colour = "rgb(" + red + "," + green + "," + blue + ")";
+  document.body.style.backgroundColor = colour;
 }
 
 function doDoubleClickAction() {
