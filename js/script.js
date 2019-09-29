@@ -51,6 +51,10 @@ project 1 - A Random Quote Generator
 ***/
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
+document.getElementById('pickHumour').addEventListener("click", setTagToHumour, false);
+document.getElementById('pickScience').addEventListener("click", setTagToScience, false);
+document.getElementById('pickFakes').addEventListener("click", setTagToFake, false);
+document.getElementById('pickAny').addEventListener("click", setTagToAny, false);
 
 
 
