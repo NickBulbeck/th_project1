@@ -14,7 +14,7 @@ var quotes = [
   {quote: "Money is the root of all evil.",
    source: "St Paul", citation: "but this phrase occurs nowhere in the Bible.", tag: "fake"},
   {quote: "A very great deal more truth can be known, than can be proven.",
-   socure: "Richard Feynman", year:1965, citation:"Nobel lecture", tag:"science"},
+   source: "Richard Feynman", year:1965, citation:"Nobel lecture", tag:"science"},
   {quote: " My father had a profound effect on me. He was a lunatic.",
    source: "Spike Milligan", tag: "humour"},
   {quote: "If you want to have good ideas you must have many ideas.",
