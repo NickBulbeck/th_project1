@@ -1,7 +1,7 @@
 var loadQuoteButton = document.getElementById("loadQuote");
 var clickCount = 0;
 var trinTragula = 0;
-var tagChoice = "all";
+var workingArray = quotes;
 
 function printQuote() {
   clickCount++;
@@ -9,15 +9,30 @@ function printQuote() {
     singleClickTimer = setTimeout(function() {
       clickCount = 0;
       setBackgroundColour();
+
     }, 400);
   } else if (clickCount === 2) {
     clearTimeout(singleClickTimer);
     clickCount = 0;
-    doDoubleClickAction();
+    zarniwoop();
   }
 }
 
- 
+function setTagToHumour() {
+  workingArray = getQuotesByTag("humour");
+} 
+
+function setTagToScience() {
+  workingArray = getQuotesByTag("science");
+} 
+
+function setTagToFake() {
+  workingArray = getQuotesByTag("fake");
+} 
+
+function setTagToAny() {
+  workingArray = quotes;
+}
 
 function heartOfGold() {
   var element = document.getElementById("dontPanic");
@@ -38,7 +53,7 @@ function setBackgroundColour() {
   document.body.style.backgroundColor = colour;
 }
 
-function doDoubleClickAction() {
+function zarniwoop() {
   document.getElementById("dontPanic").style.display = "inline-block";
   document.getElementById("tagPicker").style.width = "1000px";
 }
@@ -48,7 +63,7 @@ function getRandomQuote(array) {
   return array[i];
 }
 
-function getQuoteByTag(tag) {
+function getQuotesByTag(tag) {
   var tagArray = [];
   for (var i = 0; i < quotes.length; i++) {
     if (quotes[i].tag === tag) {
