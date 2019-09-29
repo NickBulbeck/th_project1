@@ -8,8 +8,7 @@ function printQuote() {
   if (clickCount === 1) {
     singleClickTimer = setTimeout(function() {
       clickCount = 0;
-      setBackgroundColour();
-
+      renderQuoteToBrowser();
     }, 400);
   } else if (clickCount === 2) {
     clearTimeout(singleClickTimer);
@@ -73,5 +72,24 @@ function getQuotesByTag(tag) {
   return tagArray;
 }
 
+function newQuoteToHTML(quoteItem) {
+  var html = '<p class = "quote">' + quoteItem.quote + '</p>' +
+             '<p class = "source">' + quoteItem.source;
+  if (quoteItem.citation) {
+    html += '<span class="citation">' + quoteItem.citation + '</span>';
+  }
+  if (quoteItem.year) {
+    html += '<span class="year">' + quoteItem.year + '</span>';
+  }
+  html += '</p>'
+  return html;
+}
+
+function renderQuoteToBrowser() {
+  setBackgroundColour();
+  var newQoute = getRandomQuote(workingArray);
+  var html = newQuoteToHTML(newQoute);
+  document.getElementById("quote-box").innerHTML = html;
+}
 
 
