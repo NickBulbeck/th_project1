@@ -2,6 +2,7 @@ var loadQuoteButton = document.getElementById("loadQuote");
 var clickCount = 0;
 var trinTragula = 0;
 var workingArray = quotes;
+var currentQuote = null;
 
 function printQuote() {
   clickCount++;
@@ -86,9 +87,13 @@ function newQuoteToHTML(quoteItem) {
 
 function renderQuoteToBrowser() {
   setBackgroundColour();
-  var newQoute = getRandomQuote(workingArray);
-  var html = newQuoteToHTML(newQoute);
+  var newQuote = null;
+  do {
+    newQuote = getRandomQuote(workingArray);
+  } while (newQuote === currentQuote);
+  var html = newQuoteToHTML(newQuote);
   document.getElementById("quote-box").innerHTML = html;
+  currentQuote = newQuote;
 }
 
 
