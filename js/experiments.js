@@ -40,7 +40,7 @@ function heartOfGold() {
   trinTragula++;
   if (trinTragula > 1) {
     document.body.style.backgroundColor = "#000";
-    document.body.innerHTML = '<div id="totalPerspective">You are here: <ul><li></li></ul></div>';
+    document.body.innerHTML = '<div id="totalPerspectiveVortex">You are here: <ul><li></li></ul></div>';
   }
 }
 
@@ -54,7 +54,9 @@ function setBackgroundColour() {
 
 function zarniwoop() {
   document.getElementById("dontPanic").style.display = "inline-block";
-  document.getElementById("tagPicker").style.width = "1000px";
+  if (trinTragula === 0) {
+    document.getElementById("tagPicker").style.width = "1000px";
+  }
 }
 
 function getRandomQuote(array) {
