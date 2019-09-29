@@ -8,7 +8,7 @@ function printQuote() {
   if (clickCount === 1) {
     singleClickTimer = setTimeout(function() {
       clickCount = 0;
-      doClickAction();
+      setBackgroundColour();
     }, 400);
   } else if (clickCount === 2) {
     clearTimeout(singleClickTimer);
@@ -17,6 +17,7 @@ function printQuote() {
   }
 }
 
+ 
 
 function heartOfGold() {
   var element = document.getElementById("dontPanic");
@@ -29,7 +30,7 @@ function heartOfGold() {
   }
 }
 
-function doClickAction() {
+function setBackgroundColour() {
   var red = Math.floor(Math.random()*255);
   var green = Math.floor(Math.random()*255);
   var blue = Math.floor(Math.random()*255);
