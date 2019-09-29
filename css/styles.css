@@ -9,6 +9,7 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+
 #quote-box {
   position: absolute;
   top: 20%;
@@ -17,8 +18,10 @@ body {
   width: 80%;
   line-height: .5;
   display:block;
-  /*added:*/
+}
 
+#loadQuoteContainer {
+  display:block;
 }
 
 .quote {
@@ -74,6 +77,22 @@ body {
   font-style: normal;
 }
 
+.tagButton {
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.2rem;
+  margin: 1rem 1rem;
+}
+
+#tagPicker {
+  width: 730px;
+  position:relative;
+  margin:auto;
+}
+
 #loadQuote {
   position: fixed; 
   width: 12em;
@@ -87,6 +106,7 @@ body {
   background-color: #36b55c;
   padding: 15px 0;
   transition: .5s ;
+  font-size: 1.5rem;
 }
 #loadQuote:hover {
   background-color: rgba(255,255,255,.25);
@@ -97,19 +117,9 @@ body {
 }
 
 #dontPanic {
-  position: fixed; 
-  width: 12em;
-  /*display: inline-block; */
   display: none;
-  left: 50%;
-  margin-left: -6em;
-  bottom: 50px;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: #36b55c;
-  padding: 15px 0;
 }
+
 #dontPanic:hover {
   background-color: rgba(255,255,255,.25);
 }
@@ -118,6 +128,17 @@ body {
   outline: none;
   opacity: 1;
   z-index: 99;
+}
+
+#totalPerspective {
+  position:absolute;
+  display:block;
+  width:100px;
+  margin:auto;
+  top:50%;
+  left:45%;
+  text-align:center;
+  font-size:0.3rem;
 }
 
 @media (min-width: 420px) {

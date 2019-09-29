@@ -1,6 +1,7 @@
 var loadQuoteButton = document.getElementById("loadQuote");
 var clickCount = 0;
 var trinTragula = 0;
+var tagChoice = "all";
 
 function printQuote() {
   clickCount++;
@@ -23,8 +24,8 @@ function heartOfGold() {
   element.style.opacity = 1;
   trinTragula++;
   if (trinTragula > 1) {
-    document.body.style.display = "none";
     document.body.style.backgroundColor = "#000";
+    document.body.innerHTML = '<div id="totalPerspective">You are here: <ul><li></li></ul></div>';
   }
 }
 
@@ -38,6 +39,7 @@ function doClickAction() {
 
 function doDoubleClickAction() {
   document.getElementById("dontPanic").style.display = "inline-block";
+  document.getElementById("tagPicker").style.width = "1000px";
 }
 
 function getRandomQuote(array) {
@@ -56,5 +58,4 @@ function getQuoteByTag(tag) {
 }
 
 
-// loadQuoteButton.addEventListener()
 
