@@ -11,10 +11,12 @@ body {
 
 
 #quote-box {
-  position: absolute;
+  /*position: absolute;
   top: 20%;
   left: 10%;
   right: 10%;
+  width: 80%; */
+  margin: auto;
   width: 80%;
   line-height: .5;
   display:block;
@@ -89,17 +91,16 @@ body {
 
 #tagPicker {
   width: 730px;
-  position:relative;
-  margin:auto;
+  position: relative;
+  margin: auto;
+  display: block;
 }
 
 #loadQuote {
   position: fixed; 
   width: 12em;
-  display: inline-block; 
   left: 50%;
   margin-left: -6em;
-  bottom: 150px;
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;

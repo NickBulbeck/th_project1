@@ -34,9 +34,8 @@ function setTagToAny() {
 }
 
 function heartOfGold() {
-  var element = document.getElementById("dontPanic");
-  element.innerHTML = "Please do not press this button again";
-  element.style.opacity = 1;
+  document.getElementById("dontPanic").innerHTML = "Please do not press this button again";
+  document.getElementById("tagPicker").style.width = "1100px";
   trinTragula++;
   if (trinTragula > 1) {
     document.body.style.backgroundColor = "#000";
