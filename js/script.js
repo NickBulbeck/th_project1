@@ -81,9 +81,10 @@ function quoteToHTML(quoteItem) {
     html += '<span class="year">' + quoteItem.year + '</span>';
   }
   if (quoteItem.medium) {
-    html += '<span class="medium">' + quoteItem.medium + '</span>'
+    html += '<span class="medium">' + quoteItem.medium + '</span>';
   }
-  html += '</p>'
+  html += '</p>';
+  document.title = "Nick's Random Quotes: " + quoteItem.tag;
   return html;
 }
 
@@ -147,6 +148,12 @@ function printQuote() {
 // I think I'm still within the spirit of the rules:
 
 document.getElementById('loadQuote').addEventListener("click", detectDoubleClick, false);
+
+document.getElementById('pickHumour').addEventListener("click", setTagToHumour, false);
+document.getElementById('pickScience').addEventListener("click", setTagToScience, false);
+document.getElementById('pickFakes').addEventListener("click", setTagToFake, false);
+document.getElementById('pickAny').addEventListener("click", setTagToAny, false);
+document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
 
 // And finally, 
 console.log(quotes);
