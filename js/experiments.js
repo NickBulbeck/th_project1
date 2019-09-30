@@ -1,4 +1,3 @@
-var loadQuoteButton = document.getElementById("loadQuote");
 var clickTracker = 0;
 var workingArray = quotes;
 var currentQuote = null;
@@ -86,7 +85,4 @@ function renderQuoteToBrowser() {
   currentQuote = newQuote;
 }
 
-function quoteTimer() {
-  renderQuoteToBrowser();
-}
 
