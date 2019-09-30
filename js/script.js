@@ -13,12 +13,10 @@ project 1 - A Random Quote Generator
 var clickTracker = 0;
 var workingArray = quotes;
 var currentQuote = null;
-var autoQuoteTimer;
-
+var autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 // the FUNCTIONS section
-//
-// 
 
+// getRandomQuote: 
 
 
 
@@ -52,7 +50,7 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 console.log(quotes);
 
-autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
+// autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 
 
 
