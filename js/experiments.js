@@ -3,13 +3,16 @@ var clickCount = 0;
 var trinTragula = 0;
 var workingArray = quotes;
 var currentQuote = null;
+var autoQuoteTimer;
 
 function printQuote() {
   clickCount++;
   if (clickCount === 1) {
     singleClickTimer = setTimeout(function() {
       clickCount = 0;
+      clearInterval(autoQuoteTimer);
       renderQuoteToBrowser();
+      autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
     }, 400);
   } else if (clickCount === 2) {
     clearTimeout(singleClickTimer);
@@ -98,4 +101,7 @@ function renderQuoteToBrowser() {
   currentQuote = newQuote;
 }
 
+function quoteTimer() {
+  renderQuoteToBrowser();
+}
 

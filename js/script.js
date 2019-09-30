@@ -49,12 +49,16 @@ project 1 - A Random Quote Generator
   function. So do not make any changes to the line of code below this 
   comment.
 ***/
+
+
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
 document.getElementById('pickHumour').addEventListener("click", setTagToHumour, false);
 document.getElementById('pickScience').addEventListener("click", setTagToScience, false);
 document.getElementById('pickFakes').addEventListener("click", setTagToFake, false);
 document.getElementById('pickAny').addEventListener("click", setTagToAny, false);
+
+autoQuoteTimer = setInterval(quoteTimer,10000);
 
 
 
