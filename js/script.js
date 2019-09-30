@@ -46,7 +46,7 @@ var autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 
 
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", detectDoubleClick, false);
 
 console.log(quotes);
 

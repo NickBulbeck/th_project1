@@ -1,13 +1,13 @@
 
 
-function printQuote() {
+function detectDoubleClick() {
   clickTracker++;
   if (clickTracker === 1) {
     singleClickTimer = setTimeout(function() {
       clickTracker = 0;
       clearInterval(autoQuoteTimer);
-      renderQuoteToBrowser();
-      autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
+      printQuote();
+      autoQuoteTimer = setInterval(printQuote,10000);
     }, 400);
   } else if (clickTracker === 2) {
     clearTimeout(singleClickTimer);
@@ -71,7 +71,7 @@ function newQuoteToHTML(quoteItem) {
   return html;
 }
 
-function renderQuoteToBrowser() {
+function printQuote() {
   setBackgroundColour();
   var newQuote = null;
   do {
