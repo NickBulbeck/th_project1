@@ -1,3 +1,12 @@
+//
+//   I've kept the data itself here in a separate file. The idea of this is to try to look ahead
+//   to more sophisticated, full-stack projects where the data is in a database and thus
+//   completely outside the code.
+//
+//   Quote objects can be created, updated or deleted without affecting the working of the app.
+//
+
+
 var quotes = [
   {quote: "When I first said I wanted to be a comedian, everyone laughed. They're not laughing now.",
    source: "Bob Monkhouse",tag: "humour"},

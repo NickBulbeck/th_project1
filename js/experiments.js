@@ -1,7 +1,4 @@
-var clickTracker = 0;
-var workingArray = quotes;
-var currentQuote = null;
-var autoQuoteTimer;
+
 
 function printQuote() {
   clickTracker++;

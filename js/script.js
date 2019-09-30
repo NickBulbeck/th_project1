@@ -3,15 +3,21 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
+// The VARIABLES section
+//
+// clickTracker: used for detecting a double-click
+// workingArray: supports the ability to select quotes with a specific tag (category)
+// currentQuote: used to ensure that the quote always changes when printQuote() is called
+// autoQuoteTimer: used to change the quote after 10 seconds if the user does nothing
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+var clickTracker = 0;
+var workingArray = quotes;
+var currentQuote = null;
+var autoQuoteTimer;
+
+// the FUNCTIONS section
+//
+// 
 
 
 
@@ -43,6 +49,8 @@ project 1 - A Random Quote Generator
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+console.log(quotes);
 
 autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 
