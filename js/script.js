@@ -80,6 +80,9 @@ function quoteToHTML(quoteItem) {
   if (quoteItem.year) {
     html += '<span class="year">' + quoteItem.year + '</span>';
   }
+  if (quoteItem.medium) {
+    html += '<span class="medium">' + quoteItem.medium + '</span>'
+  }
   html += '</p>'
   return html;
 }
@@ -97,6 +100,8 @@ function quoteToHTML(quoteItem) {
 // If it IS clicked again during the 400 millisecond interval, it does the following:
 // 1) Resets its own internal singleClickTimer to complete the double-click event
 // 2) Calls the zarniwoop function... which is an easter-egg contained within magrathea.js.
+//
+// Acknowledgements to Ali Karbassi on github gist https://gist.github.com/karbassi/639453 for this one!
 
 function detectDoubleClick() {
   clickTracker++;
