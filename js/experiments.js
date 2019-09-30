@@ -1,22 +1,21 @@
 var loadQuoteButton = document.getElementById("loadQuote");
-var clickCount = 0;
-var trinTragula = 0;
+var clickTracker = 0;
 var workingArray = quotes;
 var currentQuote = null;
 var autoQuoteTimer;
 
 function printQuote() {
-  clickCount++;
-  if (clickCount === 1) {
+  clickTracker++;
+  if (clickTracker === 1) {
     singleClickTimer = setTimeout(function() {
-      clickCount = 0;
+      clickTracker = 0;
       clearInterval(autoQuoteTimer);
       renderQuoteToBrowser();
       autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
     }, 400);
-  } else if (clickCount === 2) {
+  } else if (clickTracker === 2) {
     clearTimeout(singleClickTimer);
-    clickCount = 0;
+    clickTracker = 0;
     zarniwoop();
   }
 }
@@ -37,15 +36,7 @@ function setTagToAny() {
   workingArray = quotes;
 }
 
-function heartOfGold() {
-  document.getElementById("dontPanic").innerHTML = "Please do not press this button again";
-  document.getElementById("tagPicker").style.width = "1100px";
-  trinTragula++;
-  if (trinTragula > 1) {
-    document.body.style.backgroundColor = "#000";
-    document.body.innerHTML = '<div id="totalPerspectiveVortex">You are here: <ul><li></li></ul></div>';
-  }
-}
+
 
 function setBackgroundColour() {
   var red = Math.floor(Math.random()*255);
@@ -55,12 +46,6 @@ function setBackgroundColour() {
   document.body.style.backgroundColor = colour;
 }
 
-function zarniwoop() {
-  document.getElementById("dontPanic").style.display = "inline-block";
-  if (trinTragula === 0) {
-    document.getElementById("tagPicker").style.width = "1000px";
-  }
-}
 
 function getRandomQuote(array) {
   var i = Math.floor(Math.random() * array.length);
