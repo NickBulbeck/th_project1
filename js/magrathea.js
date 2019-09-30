@@ -31,8 +31,17 @@ function heartOfGold() {
   }
 }
 
-
+// the clearInterval makes sure the script doesn't keep trying to change the quote. It can't, because
+// the quote-box element has been removed, but it does change the background colour from black to random.
+// We don't want this, because the Total Perspective Vortex annihilates the site's soul.
 function youHaveBeenDivertedArthurDent() {
   document.body.style.backgroundColor = "#000";
   document.body.innerHTML = '<div id="totalPerspectiveVortex">You are here: <ul><li></li></ul></div>';
+  clearInterval(autoQuoteTimer);
 }
+
+
+
+
+
+

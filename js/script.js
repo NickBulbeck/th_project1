@@ -3,8 +3,6 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
 
 /*** 
   Create the array of quote objects and name it `quotes`.
@@ -43,20 +41,8 @@ project 1 - A Random Quote Generator
 
 
 
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
-
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
-// document.getElementById('pickHumour').addEventListener("click", setTagToHumour, false);
-document.getElementById('pickScience').addEventListener("click", setTagToScience, false);
-document.getElementById('pickFakes').addEventListener("click", setTagToFake, false);
-document.getElementById('pickAny').addEventListener("click", setTagToAny, false);
 
 autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 
@@ -67,4 +53,3 @@ autoQuoteTimer = setInterval(renderQuoteToBrowser,10000);
 
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
