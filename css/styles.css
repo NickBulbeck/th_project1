@@ -75,11 +75,20 @@ body {
 }
 
 .medium {
-  font-size:0.8em;
+  font-size:1rem;
   font-style:normal;
 }
 .medium:before {
   content: "; brought to you via the medium of ";
+}
+.tag {
+  font-size:0.8rem;
+  font-style: normal;
+  text-align: right;
+  margin-right:5rem;
+}
+.tag:before {
+  content: "Quote tagged as: ";
 }
 
 .tagButton {

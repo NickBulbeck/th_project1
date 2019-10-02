@@ -70,7 +70,10 @@ function setTagToAny() {
 }
 
 // quoteToHTML turns a quote into an HTML string. We assume that the quote must always
-// contain both a quote and a source; it may optionally contain a citation and a year:
+// contain both a quote and a source; it may optionally contain a citation, a year and
+// a medium.
+// In practice all quotes have a tag property, but it's protected against a null value
+// anyway as this is a practice exercise:
 function quoteToHTML(quoteItem) {
   var html = '<p class = "quote">' + quoteItem.quote + '</p>' +
              '<p class = "source">' + quoteItem.source;
@@ -84,6 +87,9 @@ function quoteToHTML(quoteItem) {
     html += '<span class="medium">' + quoteItem.medium + '</span>';
   }
   html += '</p>';
+  if (quoteItem.tag) {
+    html += '<p class="tag">' + quoteItem.tag + '</p>';
+  }
   document.title = "Nick's Random Quotes: " + quoteItem.tag;
   return html;
 }
