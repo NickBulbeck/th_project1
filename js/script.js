@@ -75,7 +75,7 @@ function setTagToAny() {
 // In practice all quotes have a tag property, but it's protected against a null value
 // anyway as this is a practice exercise:
 function quoteToHTML(quoteItem) {
-  var html = '<p class = "quote">' + quoteItem.quote + '</p>' +
+  var html = '<p class = "quote" id="quoteParagraph">' + quoteItem.quote + '</p>' +
              '<p class = "source">' + quoteItem.source;
   if (quoteItem.citation) {
     html += '<span class="citation">' + quoteItem.citation + '</span>';
@@ -117,6 +117,7 @@ function detectDoubleClick() {
       clickTracker = 0;
       clearInterval(autoQuoteTimer);
       printQuote();
+      findElements();
       autoQuoteTimer = setInterval(printQuote,10000);
     }, 400);
   } else if (clickTracker === 2) {
