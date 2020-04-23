@@ -161,7 +161,5 @@ document.getElementById('pickFakes').addEventListener("click", setTagToFake, fal
 document.getElementById('pickAny').addEventListener("click", setTagToAny, false);
 document.getElementById('dontPanic').addEventListener("click", heartOfGold, false);
 
-// And finally, 
-console.log(quotes);
 
 
