@@ -13,7 +13,8 @@ project 1 - A Random Quote Generator
 var clickTracker = 0;
 var workingArray = quotes;
 var currentQuote = "";
-var autoQuoteTimer = setInterval(printQuote,10000);
+var quoteInterval = 10000;
+var autoQuoteTimer = setInterval(printQuote,quoteInterval);
 
 
 // *********************************************
@@ -117,7 +118,7 @@ function detectDoubleClick() {
       clickTracker = 0;
       clearInterval(autoQuoteTimer);
       printQuote();
-      autoQuoteTimer = setInterval(printQuote,10000);
+      autoQuoteTimer = setInterval(printQuote,quoteInterval);
     }, 400);
   } else if (clickTracker === 2) {
     clearTimeout(singleClickTimer);

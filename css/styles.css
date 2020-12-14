@@ -82,10 +82,10 @@ body {
   content: "; brought to you via the medium of ";
 }
 .tag {
-  font-size:0.8rem;
+  font-size:1rem;
   font-style: normal;
-  text-align: right;
-  margin-right:5rem;
+  text-align: center;
+  margin: 2rem auto;
 }
 .tag:before {
   content: "Quote tagged as: ";
@@ -104,7 +104,7 @@ body {
 #tagPicker {
   width: 730px;
   position: relative;
-  margin: auto;
+  margin: 2rem auto;
   display: block;
 }
 
