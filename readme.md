@@ -9,3 +9,4 @@ Project 1: A Random Quote Generator
 -- More properties in the quote object, like category (or think of something clever)
 -- Time-based setInterval() thing that refreshes the quote automatically
 -- Random background colour when the quote changes
+  
